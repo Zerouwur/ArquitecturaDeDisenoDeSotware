@@ -13,10 +13,10 @@ Arévalo Salinas Karina Janet IS21110440 <br>
 Diaz Zavala Daniel lS21111005 <br>
 Hernández Vázquez Karen Daniela IS21110660 <br>
 Ledesma Medina Jonathan IS21110030 <br>
- Montenegro Guerrero Óscar IS21110922 <br>
+Montenegro Guerrero Óscar IS21110922 <br>
 Muños Olvera Francisco Gerardo IS21110228  <br>
-Natal Velázquez Kimberly Michelle IS21110668 <br>
-Villa Nueva Barbosa Jesús Ismael IS21110829 <br>
+Natal Velazquez Kimberly Michelle IS21110668 <br>
+Villanueva Barbosa Jesús Ismael IS21110829 <br>
 Vazquez Garcia Nahum Josue IS21111282
 </p>
 
