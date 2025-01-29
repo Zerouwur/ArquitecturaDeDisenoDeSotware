@@ -31,11 +31,104 @@ Vazquez Garcia Nahum Josue IS21111282
 
 <p align="center"> <b>Tema: </b> Dominancia Cerebral</p>
 
-### Entendimiento y descripción del Problema
-### Descomposición de los elementos del problema
-### Diagrama de clases de la integración
-### Diagramas UML
-### Investigar la implementación de ISO 27001 en su Proyecto
+## Entendimiento y descripción del Problema
+## Descomposición de los elementos del problema
+## Diagrama de clases de la integración
+## Diagramas UML
+### **1. Diagrama de Casos de Uso**
+```mermaid
+graph TD
+    UsuarioFinal["Usuario Final"] --> |"Iniciar sesión"| Login["Login"]
+    UsuarioFinal --> |"Registrarse"| Registro["Registro"]
+    UsuarioFinal --> |"Recuperar contraseña"| Recuperar["Recuperar Contraseña"]
+    UsuarioFinal --> |"Responder preguntas"| Responder["Responder Encuestas"]
+
+    Administrador["Administrador"] --> |"Gestionar usuarios"| GestionUsuarios["Gestionar Usuarios"]
+    Administrador --> |"Gestionar preguntas"| GestionPreguntas["Gestionar Preguntas"]
+    Administrador --> |"Gestionar respuestas"| GestionRespuestas["Gestionar Respuestas"]
+    Administrador --> |"Crear eventos"| CrearEvento["Crear Eventos"]
+
+    UsuarioFinal --- Sistema["Sistema Web"]
+    Administrador --- Sistema
+```
+### **2. Diagrama de Base de Datos**
+
+```mermaid
+erDiagram
+    eventos {
+        INT id PK
+        INT idEvento
+        VARCHAR(50) nombre
+        INT cantidadLimite
+        VARCHAR(50) fechaLimite
+        VARCHAR(100) enlace
+    }
+
+    usuarios {
+        INT idUsuario PK
+        VARCHAR(30) nombreUsuario
+        VARCHAR(100) correoElectronico
+        VARCHAR(100) contrasena
+        VARCHAR(20) rolUsuario
+    }
+
+    respuestas {
+        INT idRespuesta PK
+        INT idEvento FK
+        VARCHAR(100) usuarioRespuesta
+        VARCHAR(100) respuesta
+        INT tipoA
+        INT tipoB
+        INT tipoC
+        INT tipoD
+        VARCHAR(20) tipoFinal
+    }
+
+    usuarios ||--o{ respuestas : "contesta"
+    eventos ||--o{ respuestas : "tiene"
+
+```
+### **3. Diagrama de Despliegue**
+```mermaid
+graph TD
+    subgraph "Cliente"
+        navegador["Navegador Web"]
+    end
+
+    subgraph "Servidor Web"
+        servidorWeb["Servidor Apache/Tomcat"]
+    end
+
+    subgraph "Servidor de Aplicaciones"
+        backend["Aplicación Backend (Node.js, Java, Python, etc.)"]
+    end
+
+    subgraph "Base de Datos"
+        database["Servidor MySQL/PostgreSQL"]
+    end
+
+    navegador -->|HTTP/HTTPS| servidorWeb
+    servidorWeb -->|Comunicación API| backend
+    backend -->|Consultas SQL| database
+```
+
+### 4. Diagrama de Actividad
+
+```mermaid
+stateDiagram-v2
+    [*] --> SolicitarDatos
+    SolicitarDatos --> ValidarDatos
+    ValidarDatos --> DatosInvalidos: Datos no válidos
+    DatosInvalidos --> SolicitarDatos: Reintentar ingreso
+    ValidarDatos --> GuardarUsuario: Datos válidos
+    GuardarUsuario --> Confirmacion
+    Confirmacion --> [*]
+
+```
+
+
+
+## Investigar la implementación de ISO 27001 en su Proyecto
 
 **Que es la norma ISO 27001**
 La norma ISO 27001 es contar con un sistema de gestión de seguridad de la información basado en la norma ISO 27001 para proteger los datos 
