@@ -33,49 +33,51 @@ Vazquez Garcia Nahum Josue IS21111282
 
 ![alt text](img/Logo.jpg)
 
-## Entendimiento y descripción del Problema
+# Entendimiento y descripción del Problema
 La dominancia cerebral es muy util en diversas evaluaciones en las que se necesita identificar la forma de trabajar y el desempeño en distintas habilidades, esto dependiendo de que tipo de dominancia llegue a tener cada persona, por lo que para considerar a alguien para un puesto en específico, conocer este dato de la persona seria de utilidad para considerarlo o no, al igual que se puede hacer en alumnos para conocer las necesidades y poder tener un mejor desempeño Profesor-Alumno.
 Sin embargo tener acceso a esta información de forma clara precisa y sin ser invasiva con el usuario, es decir no exponerlo a estimulos como una entrevista cara a cara en la que su comportamiento y respuestas puedan ser poco naturales, es poco comun, por lo que una pagina donde tu puedas crear un evento unico para hacer una encuesta a un grupo de personas determinadas en la que solo tu tengas los resultados sin la capacidad de ser alterados, seria muy util para los casos antes mecionados.
-## Descomposición de los elementos del problema
-### 1. **Interfaces** 🫡
+# Descomposición de los elementos del problema
+ 1. **Interfaces** 🫡
 - Diseño intuitivo para el facil manejo del sistema.
 
-### 2. **Validación y Autenticación**🔒
+2. **Validación y Autenticación**🔒
 - Autorización al sistema mediante un modulo para registro de usuarios.
 - Gestión de roles y permisos.
 - Alertas por correos no validos,no existentes o por credenciales vacias.
 -  Protección contra SQL injection.
 
-### 3. **Gestión de los datos**⚙️
+3. **Gestión de los datos**⚙️
 - Base de datos segura para el almacenamiento de información.
 
-### 4. **Cumplimiento de ISO 27001**👩‍🔧
+4. **Cumplimiento de ISO 27001**👩‍🔧
 - Documentación de políticas de seguridad.
 - Identificación y prevención de riesgos.
 - Implementación de controles de seguridad adecuados.
 
-### 5. **Feedback**🚨
+5. **Feedback**🚨
 - Envio de alertas o notificaciones.
 
-### 6. **Interfaz de usuario** 💻
+6. **Interfaz de usuario** 💻
 - Función para contestar un formulario
 - Función para cerrar sesión
 
-### 7. **Interfaz para respuesta de cuestionario**📃
+7. **Interfaz para respuesta de cuestionario**📃
 - Conectada a la base de datos
 - Función enviar un formulario
 - Validación de respuestas
 
-### 8. **Interfaz de administrador**📈
+8. **Interfaz de administrador**📈
 - Función para crear un evento
 - Función para ver los resultados de un evento
 
-### 9. **Interfaces de respuesta de dominio cerebral**🧠
+9. **Interfaces de respuesta de dominio cerebral**🧠
 - Evaluación de las respuestas y en base de ellas arrojar un resultado
 - Tablas o graficos para visualizar los datos relevantes.
-## Diagrama de clases de la integración
+
+# Diagrama de clases de la integración
 ![alt text](dClases.png)
-## Diagramas UML
+
+# Diagramas UML
 ### **1. Diagrama de Casos de Uso**
 ```mermaid
 graph TD
@@ -169,8 +171,7 @@ stateDiagram-v2
 **Diagrama de secuencia**
 ![alt text](dSecuencia.png)
 
-
-## Investigar la implementación de ISO 27001 en su Proyecto
+# Investigar la implementación de ISO 27001 en su Proyecto
 
 **Que es la norma ISO 27001**
 La norma ISO 27001 es contar con un sistema de gestión de seguridad de la información basado en la norma ISO 27001 para proteger los datos 
