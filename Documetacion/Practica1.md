@@ -60,7 +60,20 @@ Ofrece herramientas que permiten asegurar, integrar y tener de manera confidenci
 3.	**Definición de alcance**
 * **Política de privacidad de datos:** Los datos de los usuarios son almacenados en una base de datos, y se definen cómo se recopilan, almacenan y utilizan los datos del usuario.
 * **Gestión de acceso:** Se definen roles y permisos para acceder al sistema (administradores y usuarios).
-los **administradores** tienen acceso a todas las funciones del sistema, mientras que los **usuarios** solo tienen acceso a las funciones que les permiten realizar su trabajo.
+los **administradores** tienen acceso a todas las funciones del sistema como por ejmplo.
+
+* **Gestión del Sistema:** Configurar, supervisar y mantener el sistema.
+* **Control de Accesos:** Crear y gestionar las cuentas de usuarios, estableciendo los permisos necesarios.
+* **Monitoreo de Datos:** Revisar y analizar el rendimiento del sistema para garantizar que funcione sin interrupciones.
+* **Resolución de Problemas:** Solucionar errores técnicos que puedan surgir en la plataforma.
+* **Actualización y Seguridad:** Implementar actualizaciones y medidas de seguridad para proteger los datos de los usuarios y los resultados del test.
+
+Mientras que los **usuarios** solo tienen acceso a las funciones que les permiten realizar su trabajo por ejmplo.
+
+* **Realización del Test:** Completar el test de dominancia cerebral respondiendo las preguntas de acuerdo con las instrucciones.
+* **Consulta de Resultados:** Visualizar e interpretar los resultados obtenidos.
+* **Registro y Acceso:** Crear una cuenta o iniciar sesión en la plataforma para acceder al test.
+* **Descarga de Información:** Descargar reportes o análisis del test.
 * **Control de incidentes:** En caso de que ocurra un incidente, se definen los procedimientos para identificar, responder y resolver incidentes de seguridad como por ejemplo backups de la base de datos, monitoreo de los logs, etc.
 
 4.	**Desarrollo de controles y políticas**
@@ -76,7 +89,6 @@ los **administradores** tienen acceso a todas las funciones del sistema, mientra
 * Capacita a los colaboradores en seguridad de la información.
 
 5.	**Capacitación**
-* Desarrollar un plan de acción para implementar los controles y políticas definidas.
 * Integrar herramientas tecnológicas para monitorear y proteger los datos, como firewalls, software de análisis de vulnerabilidades.
 6.	**Auditorias internas**
 Realizacion de  auditorías internas para asegurarte de que los controles funcionan como se espera.
