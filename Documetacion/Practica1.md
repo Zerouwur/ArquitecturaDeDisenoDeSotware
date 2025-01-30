@@ -77,7 +77,6 @@ Sin embargo tener acceso a esta información de forma clara precisa y sin ser in
 - Tablas o graficos para visualizar los datos relevantes.
 
 # Diagrama de clases de la integración
-![alt text](dClases.png)
 
 ```mermaid
 classDiagram
@@ -222,7 +221,6 @@ stateDiagram-v2
 
 ```
 #### 5. Diagrama de secuencia
-![alt text](dSecuencia.png)
 
 ```mermaid
 sequenceDiagram
@@ -327,7 +325,7 @@ Mientras que los **usuarios** solo tienen acceso a las funciones que les permite
 * **Descarga de Información:** Descargar reportes o análisis del test.
 * **Control de incidentes:** En caso de que ocurra un incidente, se definen los procedimientos para identificar, responder y resolver incidentes de seguridad como por ejemplo backups de la base de datos, monitoreo de los logs, etc.
 
-4.	#### Desarrollo de controles y políticas**
+4.	#### Desarrollo de controles y políticas
 
 **Controles técnicos:**
 
@@ -341,7 +339,7 @@ Mientras que los **usuarios** solo tienen acceso a las funciones que les permite
 
 5.	#### Capacitación
 * Integrar herramientas tecnológicas para monitorear y proteger los datos, como firewalls, software de análisis de vulnerabilidades.
-6.	#### Auditorias internas**
+6.	#### Auditorias internas
 Realizacion de  auditorías internas para asegurarte de que los controles funcionan como se espera.
 Realizacion de pruebas para identificar incidentes y realizar mejoras continuas en el SGSI.
 
