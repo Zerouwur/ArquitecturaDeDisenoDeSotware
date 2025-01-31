@@ -193,7 +193,7 @@ stateDiagram-v2
 
 ```
 ## 5. Diagrama de secuencia
-### 1. login
+### 1. Login
 
 ```mermaid
 sequenceDiagram
@@ -232,6 +232,31 @@ sequenceDiagram
 ```
 
 ### 2. Diagrama de Registro
+
+```mermaid
+sequenceDiagram
+    participant U as Usuario
+    participant F as Frontend
+    participant B as Backend
+    
+    F->>U: 1: Solicita datos de registro
+    U->>F: 2: Ingresa nombre, correo, etc.
+    
+    F->>F: 3: Comprueba que no haya campos vacíos
+    F->>U: 4: Manda feedback error en registro
+    
+    F->>F: 5: Verifica que no haya caracteres inválidos
+    F->>U: 6: Feedback de caracteres inválidos
+    
+    F->>B: 7: Manda datos
+    B->>B: 8: Encriptación de datos
+    B->>B: 9: Almacena en base de datos
+    
+    F->>U: 10: Feedback registro exitoso y devuelve al login
+    B->>F: 11: Notificación de usuario registrado
+```
+
+
 ### 3. Diagrama de Contestar cuestionario
 
 ```mermaid
@@ -331,8 +356,33 @@ sequenceDiagram
     Backend->>FrontEnd: ¿Qué rol tiene el usuario?
 ```
 
-### 7. Diagrama de Crear evento
-### 8. Diagrama de Ver gráfica
+### 7. Diagrama de crear evento
+
+```mermaid
+sequenceDiagram
+    participant A as Administrador
+    participant F as Frontend
+    participant B as Backend
+    
+    A->>F: 1: Iniciar sesión como administrador
+    F->>A: 2: Devuelve la interfaz de administrador
+    A->>F: 3: Solicita creación de evento
+    F->>A: 4: Pide datos del evento
+    A->>F: 5: Ingresa nombre del evento, cupos y plazos
+    
+    F->>F: 6: Los campos están vacíos?
+    F->>A: 7: Feedback sobre campos incompletos
+    F->>F: 8: La fecha de los plazos es válida?
+    F->>A: 9: Feedback sobre fechas vencidas
+    
+    F->>B: 10: Envía datos
+    B->>B: 11: Creación de link único
+    B->>B: 12: Almacena el evento en la base de datos
+    B->>F: 13: Aprueba el evento
+    F->>A: 14: Feedback de creación exitosa
+```
+
+### 8. Diagrama de ver gráfica
 
 ```mermaid
 sequenceDiagram
