@@ -278,6 +278,83 @@ end
 Frontend->>Usuario: 2: Mostrar resultados
 
 ```
+### Diagrama de cerrar sesión
+```mermaid
+sequenceDiagram
+    participant Usuario
+    participant FrontEnd
+    participant Backend
+
+    loop While
+        Usuario->>FrontEnd: Solicita credenciales
+        Usuario->>FrontEnd: Escribe credenciales
+        FrontEnd->>Backend: Comprueba credenciales no vacías
+        alt Credenciales no vacías
+            Backend->>FrontEnd: Feedback_error
+        end
+    end
+
+    Usuario->>FrontEnd: Manda credenciales
+    alt Usuario y contraseña válidos
+        FrontEnd->>Backend: Usuario y contraseña válidos
+    else Usuario no válido
+        FrontEnd->>Usuario: Feedback_error
+    end
+
+    alt Usuario existe?
+        Backend->>FrontEnd: Usuario existe
+    else Usuario no encontrado
+        FrontEnd->>Usuario: Feedback_error
+    end
+
+    alt Contraseña válida?
+        Backend->>FrontEnd: Contraseña válida
+    else Contraseña incorrecta
+        FrontEnd->>Usuario: Feedback_error
+    end
+
+    Backend->>FrontEnd: ¿Qué rol tiene el usuario?
+```
+### Diagrama Generación de Graficas
+```mermaid
+sequenceDiagram
+    participant Usuario
+    participant Frontend
+    participant Backend
+
+    Usuario->>Frontend: 1: Solicita gráfica de resultados
+    Frontend->>Backend: 2: Verifica respuestas
+
+    alt 3: Respuestas Válidas
+        Backend-->>Frontend: 4. Sí
+        Backend->>Backend: 5. Recopila respuestas del usuario
+        Backend->>Backend: 6. Calcula porcentajes (A, B, C, D)
+        Backend->>Backend: 7. Prepara datos para gráfica
+        Backend-->>Frontend: 8. Envía datos procesados
+        Frontend->>Frontend: 9. Usa librería de gráficas
+        Frontend-->>Usuario: 10. Muestra gráfica con porcentajes (A, B, C, D)
+        Frontend-->>Usuario: 11. Muestra lista de respuestas
+    else
+        Backend-->>Frontend: 12. No
+        Frontend-->>Usuario: 13. Respuestas incompletas
+    end
+
+    Frontend->>Usuario: 14: Mostrar gráfica y resultados
+```
+
+### Diagrama Modo Nocturno
+
+```mermaid
+sequenceDiagram
+    participant Usuario
+    participant FrontEnd
+
+    Usuario->>FrontEnd: Hace clic en "Modo Nocturno"
+    FrontEnd->>Usuario: Cambia a tema oscuro
+    Usuario->>FrontEnd: Hace clic en "Modo Nocturno" nuevamente
+    FrontEnd->>Usuario: Restaura tema claro
+```
+
 
 
 # Implementación de ISO 27001 en el proyecto
