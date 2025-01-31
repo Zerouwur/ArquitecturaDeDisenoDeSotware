@@ -1,4 +1,7 @@
- ![alt text](img/NombreEscuela.png)
+
+ <div align="center">
+    <img src="img/NombreEscuela.png" alt="alt text">
+</div>
 
 <p align="center"> <b>Práctica 1</b>
 </p><p align="center"> <b>Escuela:</b>
@@ -20,15 +23,15 @@ Vazquez García Nahum Josué IS21111282 </p>
 Arquitectura y Diseño de Software </p>
 <p align="center"> <b>Grupo:</b> ISCC70C </p><p align="center"> 
 <b>SR DOCTOR MAESTRO PROFESOR INGENIERO:</b> Manuel Alejandro Guzmán Hernández </p>
-<p align="center"> <b>Semestre:</b> Enero-Mayo 2025 </p>
+<p align="center"> <b>Semestre:</b> Enero - Junio 2025 </p>
 <p align="center"> <b>Tema:</b> Dominancia Cerebral</p>
 
-![alt text](img/Logo.jpg)
+ <div align="center">
+    <img src="img/Logo.jpg" alt="alt text">
+</div>
 
 # Entendimiento del problema
-La dominancia cerebral es muy útil en diversas evaluaciones en las que se necesita identificar la forma de trabajar y el desempeño en distintas habilidades, dependiendo del tipo de dominancia de cada persona. Por ello, conocer esta
-información es valioso para considerar a alguien para un puesto específico o para entender las necesidades de los
-alumnos y mejorar el desempeño en la relación profesor-alumno.
+La dominancia cerebral es muy útil en diversas evaluaciones en las que se necesita identificar la forma de trabajar y el desempeño en distintas habilidades, dependiendo del tipo de dominancia de cada persona. Por ello, conocer estainformación es valioso para considerar a alguien para un puesto específico o para entender las necesidades de losalumnos y mejorar el desempeño en la relación profesor-alumno.
 
 Sin embargo, obtener esta información de manera clara, precisa y no invasiva es poco común. Una página web que permita
 crear un evento único para realizar encuestas a un grupo de personas determinadas, donde solo el creador tenga acceso
@@ -326,19 +329,6 @@ sequenceDiagram
     end
 
     Backend->>FrontEnd: ¿Qué rol tiene el usuario?
-```
-
-### 6. Diagrama de Modo Nocturno
-
-```mermaid
-sequenceDiagram
-    participant Usuario
-    participant FrontEnd
-
-    Usuario->>FrontEnd: Hace clic en "Modo Nocturno"
-    FrontEnd->>Usuario: Cambia a tema oscuro
-    Usuario->>FrontEnd: Hace clic en "Modo Nocturno" nuevamente
-    FrontEnd->>Usuario: Restaura tema claro
 ```
 
 ### 7. Diagrama de Crear evento
