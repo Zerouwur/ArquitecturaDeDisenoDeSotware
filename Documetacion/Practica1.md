@@ -1,52 +1,49 @@
  ![alt text](img/NombreEscuela.png)
 
-<p align="center"> <b>Practica 1</b> </p>
-
-<p align="center"> <b>Escuela:</b>  Instituto Tecnológico Superior De Irapuato </p>
-
-
+<p align="center"> <b>Práctica 1</b>
+</p><p align="center"> <b>Escuela:</b>
+Instituto Tecnológico Superior de Irapuato </p>
 <p align="center"> <b>Carrera:</b> Ingeniería en Sistemas Computacionales </p>
-
-<p align="center"> <b>Integrantes:</b> </p>
-<p align="center">
-Arévalo Salinas Karina Janet IS21110440 <br>
-Diaz Zavala Daniel lS21111005 <br>
+<p align="center"> <b>Integrantes:</b>
+</p> <p align="center"> Arévalo Salinas Karina Janet IS21110440 <br>
+ Díaz Zavala Daniel IS21111005 <br>
 Hernández Vázquez Karen Daniela IS21110660 <br>
 Ledesma Medina Jonathan IS21110030 <br>
 Montenegro Guerrero Óscar IS21110922 <br>
-Muños Olvera Francisco Gerardo IS21110228  <br>
-Natal Velazquez Kimberly Michelle IS21110668 <br>
+Muñoz Olvera Francisco Gerardo IS21110228 <br>
+Natal Velázquez Kimberly Michelle IS21110668 <br>
 Villanueva Barbosa Jesús Ismael IS21110829 <br>
-Vazquez Garcia Nahum Josue IS21111282
-</p>
-
-<p align="center"> <b>Materia:</b> Arquitectura y Diseño de Software </p>
-
-<p align="center"> <b>Grupo:</b> ISCC70C </p>
-
-<p align="center"> <b>Profesor: </b> Manuel Alejandro Guzmán hernández </p>
-
-<p align="center"> <b>Semestre: </b> Enero-mayo 2025 </p>
-
-
-<p align="center"> <b>Tema: </b> Dominancia Cerebral</p>
+Vazquez García Nahum Josué IS21111282 </p>
+<p align="center">
+<b>Materia:</b>
+Arquitectura y Diseño de Software </p>
+<p align="center"> <b>Grupo:</b> ISCC70C </p><p align="center"> 
+<b>Profesor:</b> Manuel Alejandro Guzmán Hernández </p>
+<p align="center"> <b>Semestre:</b> Enero-Mayo 2025 </p>
+<p align="center"> <b>Tema:</b> Dominancia Cerebral</p>
 
 ![alt text](img/Logo.jpg)
 
-# Entendimiento y descripción del Problema
-La dominancia cerebral es muy util en diversas evaluaciones en las que se necesita identificar la forma de trabajar y el desempeño en distintas habilidades, esto dependiendo de que tipo de dominancia llegue a tener cada persona, por lo que para considerar a alguien para un puesto en específico, conocer este dato de la persona seria de utilidad para considerarlo o no, al igual que se puede hacer en alumnos para conocer las necesidades y poder tener un mejor desempeño Profesor-Alumno.
-Sin embargo tener acceso a esta información de forma clara precisa y sin ser invasiva con el usuario, es decir no exponerlo a estimulos como una entrevista cara a cara en la que su comportamiento y respuestas puedan ser poco naturales, es poco comun, por lo que una pagina donde tu puedas crear un evento unico para hacer una encuesta a un grupo de personas determinadas en la que solo tu tengas los resultados sin la capacidad de ser alterados, seria muy util para los casos antes mecionados.
+# Entendimiento y descripción del problema
+La dominancia cerebral es muy útil en diversas evaluaciones en las que se necesita identificar la forma de trabajar y
+el desempeño en distintas habilidades, dependiendo del tipo de dominancia de cada persona. Por ello, conocer esta
+información es valioso para considerar a alguien para un puesto específico o para entender las necesidades de los
+alumnos y mejorar el desempeño en la relación profesor-alumno.
+
+Sin embargo, obtener esta información de manera clara, precisa y no invasiva es poco común. Una página web que permita
+crear un evento único para realizar encuestas a un grupo de personas determinadas, donde solo el creador tenga acceso
+a los resultados y estos no puedan ser alterados, sería muy útil para los casos mencionados.
 # Descomposición de los elementos del problema
 #### 1. **Interfaces** 🫡
-- Diseño intuitivo para el facil manejo del sistema.
+- Diseño intuitivo para el fácil manejo del sistema.
 
 #### 2. **Validación y Autenticación**🔒
-- Autorización al sistema mediante un modulo para registro de usuarios.
+- Autorización al sistema mediante un módulo para registro de usuarios.
 - Gestión de roles y permisos.
-- Alertas por correos no validos,no existentes o por credenciales vacias.
--  Protección contra SQL injection.
+- Alertas por correos no válidos, no existentes o por credenciales vacías.
+- Protección contra SQL injection.
 
-#### 3. **Gestión de los datos**⚙️
+#### 3. **Gestión de los datos **⚙️
 - Base de datos segura para el almacenamiento de información.
 
 #### 4. **Cumplimiento de ISO 27001**👩‍🔧
@@ -58,23 +55,23 @@ Sin embargo tener acceso a esta información de forma clara precisa y sin ser in
 - Envio de alertas o notificaciones segun una accion del usuario o sistema.
 
 #### 6. **Interfaz de usuario** 💻
-- Función para contestar un formulario
-- Función para ver resultados.
-- Función para ver informacion acerca de los tipos de dominancia.
-- Función para cerrar sesión
+- Funcionalidad para contestar un formulario.
+- Posibilidad de ver resultados.
+- Sección de información sobre los tipos de dominancia.
+- Opción para cerrar sesión.
 
 #### 7. **Interfaz para respuesta de cuestionario**📃
-- Conectada a la base de datos
-- Función enviar un formulario
-- Validación de respuestas
+- Conexión con la base de datos.
+- Enviar un formulario.
+- Validación de respuestas.
 
 ### 8. **Interfaz de administrador**📈
-- Función para crear un evento
-- Función para ver los resultados de un evento
-- Funcion para editar un evento
+- Creación de eventos.
+- Visualización de resultados de un evento.
+- Edición de eventos.
 ### 9. **Interfaces de respuesta de dominio cerebral**🧠
-- Evaluación de las respuestas y en base de ellas arrojar un resultado
-- Tablas o graficos para visualizar los datos relevantes.
+- Evaluación de las respuestas y generación de un resultado.
+- Representación de datos mediante tablas o gráficos.
 
 # Diagrama de clases de la integración
 
@@ -262,86 +259,124 @@ sequenceDiagram
  
 ```mermaid
 sequenceDiagram
-
     participant Usuario
-    participant Sistema 
-    participant Base de Datos
+    participant Frontend
+    participant Backend
 
-    Sistema->>Usuario: 1. Mostrar preguntas al usuario
-    Usuario->>Sistema: 2. Envia las respuestas del test
-     
-    alt Test Finalizado
-        Sistema-->>Usuario: 4. Test Completado
-    else Test no finalizado
-        Sistema-->>Usuario: 5. Feedback_Error
-    end
+    Usuario->>Frontend: 1: Solicita resultado
+    Frontend->>Backend: 2: Solicita respuestas
 
-    Sistema->>Base de Datos: 6. Almacena las respuestas del test
-    Sistema->>Base de Datos: 7. Solicita el resultado del test
-    Base de Datos->>Sistema: 8. Devuelve el resultado del test
-    Sistema->>Usuario: 9. Mostrar resultados del test
-    
-    
+alt 3: Respuestas Válidas
+    Backend-->>Frontend: 4. Si
+    Frontend-->>Usuario: 5. Test Completado
+
+else 
+    Backend-->>Frontend: 6. No
+    Frontend-->>Usuario: 7. Test Incompleto
+end
+
+Frontend->>Usuario: 2: Mostrar resultados
+
 ```
 
-# Investigar la implementación de ISO 27001 en su Proyecto
 
-#### Que es la norma ISO 27001
-La norma ISO 27001 es contar con un sistema de gestión de seguridad de la información basado en la norma ISO 27001 para proteger los datos 
+# Implementación de ISO 27001 en el proyecto
 
-#### Que permite la ISO 27001
-La norma ISO 27001 permite que los datos suministrados sean confidenciales, íntegros, disponibles y legales para protegerlos de los riesgos que se puedan presentar. Contar con este sistema dentro de la organización genera confianza entre los clientes, proveedores y empleados, además, es un referente mundial. 
+#### ¿Qué es la norma ISO 27001?
+La norma ISO 27001 establece un sistema de gestión de seguridad de la información para proteger los datos.
 
-Ofrece herramientas que permiten asegurar, integrar y tener de manera confidencial toda la información de la compañía y los sistemas que la almacenan, evitando así que un ciberataque se materialce y así mismo, hacer más competitiva a la empresa y cuidar su reputación.
+#### Beneficios de la ISO 27001
+- Garantiza la confidencialidad, integridad, disponibilidada y legalidad de los datos.
+- Genera confianza entre clientes, proveedores y empleados.
+- Ofrece herramientas para proteger la información contra ciberataques.
 
-#### Proceso de implementación de la ISO 27001
+#### Proceso de implementación
 1.	#### Análisis inicial
-* Definicion del alcance del SGSI del proyecto: ¿Qué partes de la prueba estarán protegidas bajo ISO 27001? las bases de datos de resultados, datos personales de los usuarios y sistema backend.
-* Partes interesadas del sistema: usuarios y administradores del sistema.
-* Los objetivos de seguridad de la información son garantizar la privacidad de los usuarios y la protección de datos sensibles.
+- Definición del alcance del SGSI de los resultados, datos personales de los usuarios y sistema backend.
+- Identificación de partes interesadas (usuarios y administradores).
+- Establecimiento de objetivos de seguridad para garantizar la privacidad de los usuarios y la protección de datos sensibles.
 
 2.	#### Identificación de riesgos
-* **Activos**: Datos personales de los usuarios y resultados de las encuestas.
-* **Riesgos posibles:** ¿Qué amenazas podrían comprometer estos activos? Accesos no autorizados, o pérdida de datos.
-* **Evaluar el impacto:** Determina el daño que causaría cada riesgo.
-* **Planificar el tratamiento de riesgos:** En caso de una perdidad de informacion, los datos seran evaluados para determinar si se debe mitigar o mejora.
+- **Activos**: Datos personales de los usuarios y resultados de las encuestas.
+- **Riesgos posibles:** Accesos no autorizados o pérdida de datos.
+- **Evaluar el impacto:** Determina el daño que causaría cada riesgo.
+- **Planificar el tratamiento de riesgos:** En caso de una perdidad de informacion, los datos seran evaluados para determinar si se debe mitigar o mejora.
 
 3.	#### Definición de alcance
-* **Política de privacidad de datos:** Los datos de los usuarios son almacenados en una base de datos, y se definen cómo se recopilan, almacenan y utilizan los datos del usuario.
-* **Gestión de acceso:** Se definen roles y permisos para acceder al sistema (administradores y usuarios).
+- **Política de privacidad de datos:** Los datos de los usuarios son almacenados en una base de datos, y se definen cómo se recopilan, almacenan y utilizan los datos del usuario.
+- **Gestión de acceso:** Se definen roles y permisos para acceder al sistema (administradores y usuarios).
 los **administradores** tienen acceso a todas las funciones del sistema como por ejmplo.
 
-* **Gestión del Sistema:** Configurar, supervisar y mantener el sistema.
-* **Control de Accesos:** Crear y gestionar las cuentas de usuarios, estableciendo los permisos necesarios.
-* **Monitoreo de Datos:** Revisar y analizar el rendimiento del sistema para garantizar que funcione sin interrupciones.
-* **Resolución de Problemas:** Solucionar errores técnicos que puedan surgir en la plataforma.
-* **Actualización y Seguridad:** Implementar actualizaciones y medidas de seguridad para proteger los datos de los usuarios y los resultados del test.
+- **Gestión del Sistema:** Configurar, supervisar y mantener el sistema.
+- **Control de Accesos:** Crear y gestionar las cuentas de usuarios, estableciendo los permisos necesarios.
+- **Monitoreo de Datos:** Revisar y analizar el rendimiento del sistema para garantizar que funcione sin interrupciones.
+- **Resolución de Problemas:** Solucionar errores técnicos que puedan surgir en la plataforma.
+- **Actualización y Seguridad:** Implementar actualizaciones y medidas de seguridad para proteger los datos de los usuarios y los resultados del test.
 
 Mientras que los **usuarios** solo tienen acceso a las funciones que les permiten realizar su trabajo por ejmplo.
 
-* **Realización del Test:** Completar el test de dominancia cerebral respondiendo las preguntas de acuerdo con las instrucciones.
-* **Consulta de Resultados:** Visualizar e interpretar los resultados obtenidos.
-* **Registro y Acceso:** Crear una cuenta o iniciar sesión en la plataforma para acceder al test.
-* **Descarga de Información:** Descargar reportes o análisis del test.
-* **Control de incidentes:** En caso de que ocurra un incidente, se definen los procedimientos para identificar, responder y resolver incidentes de seguridad como por ejemplo backups de la base de datos, monitoreo de los logs, etc.
+- **Realización del Test:** Completar el test de dominancia cerebral respondiendo las preguntas de acuerdo con las instrucciones.
+- **Consulta de Resultados:** Visualizar e interpretar los resultados obtenidos.
+- **Registro y Acceso:** Crear una cuenta o iniciar sesión en la plataforma para acceder al test.
+- **Descarga de Información:** Descargar reportes o análisis del test.
+- **Control de incidentes:** En caso de que ocurra un incidente, se definen los procedimientos para identificar, responder y resolver incidentes de seguridad como por ejemplo backups de la base de datos, monitoreo de los logs, etc.
 
 4.	#### Desarrollo de controles y políticas
 
 **Controles técnicos:**
 
-* Encriptación de datos sensibles.
-* utenticación y autorización de usuarios.
-* Auditorías de acceso y monitoreo del sistema y sera creando una tabla en la base de datos que registre cada accion de cada persona.
+- Encriptación de datos, autenticación y autorización.
+- Autenticación y autorización de usuarios.
+- Capacitación en seguridad de la información.
 
 **Controles organizativos:**
 
-* Capacita a los colaboradores en seguridad de la información.
+- Capacita a los colaboradores en seguridad de la información.
 
 5.	#### Capacitación
-* Integrar herramientas tecnológicas para monitorear y proteger los datos, como firewalls, software de análisis de vulnerabilidades.
+- Integrar herramientas tecnológicas para monitorear y proteger los datos, como firewalls, software de análisis de vulnerabilidades.
 6.	#### Auditorias internas
 Realizacion de  auditorías internas para asegurarte de que los controles funcionan como se espera.
 Realizacion de pruebas para identificar incidentes y realizar mejoras continuas en el SGSI.
+
+# AOO
+
+## Analisis de requerimientos:
+## Diseño: 
+**Arquitectura**
+Al aplicar la arquitectura cliente-servidor a nuestro proyecto, podemos estructurarlo de la siguiente manera:
+
+**Cliente (Navegador Web):**
+El usuario interactúa con la aplicación a través de una interfaz desarrollada con tecnologías como HTML, CSS
+y JavaScript. Las principales funciones que realiza el cliente incluyen:
+
+- Registro de usuario.
+- Envío de solicitud de inicio de sesión.
+- Respuesta al cuestionario.
+- Visualización de resultados en formato gráfico.
+- (Para administradores) Creación de eventos.
+- (Para administradores) Consulta de resultados generales.
+
+Además, el cliente recibe datos del servidor en formato JSON y los muestra al usuario de manera dinámica.
+
+**Servidor (Backend):**
+El servidor maneja la lógica principal de la aplicación utilizando PHP e incluye las siguientes responsabilidades:
+- Gestión de usuarios (registro y autenticación).
+- Almacenamiento y procesamiento de respuestas del cuestionario.
+- Generación y visualización de resultados.
+- Creación de gráficos con la librería Chart.js.
+- Gestión integral de eventos (creación, edición y acceso).
+- Validación y control de datos.
+
+**Base de Datos:** 
+El servidor interactúa con una base de datos MySQL para almacenar y gestionar la siguiente información:
+- Datos de los usuarios.
+- Preguntas del cuestionario.
+- Opciones de respuesta.
+- Resultados de los tests.
+- Información sobre los eventos creados.
+
+
 
 
 
