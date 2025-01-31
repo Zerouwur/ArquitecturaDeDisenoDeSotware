@@ -8,6 +8,7 @@ Instituto Tecnológico Superior de Irapuato </p>
 </p> <p align="center"> Arévalo Salinas Karina Janet IS21110440 <br>
  Díaz Zavala Daniel IS21111005 <br>
 Hernández Vázquez Karen Daniela IS21110660 <br>
+Campos Guevara Fabiola Margarita IS21110197 <br>
 Ledesma Medina Jonathan IS21110030 <br>
 Montenegro Guerrero Óscar IS21110922 <br>
 Muñoz Olvera Francisco Gerardo IS21110228 <br>
@@ -18,60 +19,31 @@ Vazquez García Nahum Josué IS21111282 </p>
 <b>Materia:</b>
 Arquitectura y Diseño de Software </p>
 <p align="center"> <b>Grupo:</b> ISCC70C </p><p align="center"> 
-<b>Profesor:</b> Manuel Alejandro Guzmán Hernández </p>
+<b>SR DOCTOR MAESTRO PROFESOR INGENIERO:</b> Manuel Alejandro Guzmán Hernández </p>
 <p align="center"> <b>Semestre:</b> Enero-Mayo 2025 </p>
 <p align="center"> <b>Tema:</b> Dominancia Cerebral</p>
 
 ![alt text](img/Logo.jpg)
 
-# Entendimiento y descripción del problema
-La dominancia cerebral es muy útil en diversas evaluaciones en las que se necesita identificar la forma de trabajar y
-el desempeño en distintas habilidades, dependiendo del tipo de dominancia de cada persona. Por ello, conocer esta
+# Entendimiento del problema
+La dominancia cerebral es muy útil en diversas evaluaciones en las que se necesita identificar la forma de trabajar y el desempeño en distintas habilidades, dependiendo del tipo de dominancia de cada persona. Por ello, conocer esta
 información es valioso para considerar a alguien para un puesto específico o para entender las necesidades de los
 alumnos y mejorar el desempeño en la relación profesor-alumno.
 
 Sin embargo, obtener esta información de manera clara, precisa y no invasiva es poco común. Una página web que permita
 crear un evento único para realizar encuestas a un grupo de personas determinadas, donde solo el creador tenga acceso
 a los resultados y estos no puedan ser alterados, sería muy útil para los casos mencionados.
+
 # Descomposición de los elementos del problema
-#### 1. **Interfaces** 🫡
-- Diseño intuitivo para el fácil manejo del sistema.
-
-#### 2. **Validación y Autenticación**🔒
-- Autorización al sistema mediante un módulo para registro de usuarios.
-- Gestión de roles y permisos.
-- Alertas por correos no válidos, no existentes o por credenciales vacías.
-- Protección contra SQL injection.
-
-#### 3. **Gestión de los datos **⚙️
-- Base de datos segura para el almacenamiento de información.
-
-#### 4. **Cumplimiento de ISO 27001**👩‍🔧
-- Documentación de políticas de seguridad.
-- Identificación y prevención de riesgos.
-- Implementación de controles de seguridad adecuados.
-
-#### 5. **Feedback**🚨
-- Envio de alertas o notificaciones segun una accion del usuario o sistema.
-
-#### 6. **Interfaz de usuario** 💻
-- Funcionalidad para contestar un formulario.
-- Posibilidad de ver resultados.
-- Sección de información sobre los tipos de dominancia.
-- Opción para cerrar sesión.
-
-#### 7. **Interfaz para respuesta de cuestionario**📃
-- Conexión con la base de datos.
-- Enviar un formulario.
-- Validación de respuestas.
-
-### 8. **Interfaz de administrador**📈
-- Creación de eventos.
-- Visualización de resultados de un evento.
-- Edición de eventos.
-### 9. **Interfaces de respuesta de dominio cerebral**🧠
-- Evaluación de las respuestas y generación de un resultado.
-- Representación de datos mediante tablas o gráficos.
+- Interfaces 🫡
+- Validación y Autenticación🔒
+- Gestión de los datos ⚙️
+- Cumplimiento de ISO 27001👩‍🔧
+- Feedback🚨
+- Interfaz de usuario 💻
+- Interfaz para respuesta de cuestionario📃
+- Interfaz de administrador📈
+- Interfaces de respuesta de dominio cerebral🧠
 
 # Diagrama de clases de la integración
 
@@ -217,7 +189,8 @@ stateDiagram-v2
     Confirmacion --> [*]
 
 ```
-#### 5. Diagrama de secuencia
+## 5. Diagrama de secuencia
+### 1. login
 
 ```mermaid
 sequenceDiagram
@@ -255,8 +228,45 @@ sequenceDiagram
     FrontEnd-->>Usuario: 13. Interfaz usuario o admin
 ```
 
-### Diagrama de Mostrar resultados
- 
+### 2. Diagrama de Registro
+### 3. Diagrama de Contestar cuestionario
+
+```mermaid
+flowchart TD
+    %% Definición de objetos principales
+    subgraph Usuario
+        A[Inicio] --> B[Definir propósito del cuestionario]
+        B --> C[Identificar público objetivo]
+    end
+
+    subgraph Cuestionario
+        C --> D[Crear cuestionario]
+        D --> E[Agregar instrucciones]
+        E --> F[Seleccionar tipo de preguntas]
+    end
+
+    subgraph Pregunta
+        F --> G{¿Qué tipo de preguntas usar?}
+        G -- Abiertas --> H[Redactar preguntas abiertas]
+        G -- Cerradas --> I[Redactar preguntas cerradas]
+        G -- Mixtas --> J[Combinar preguntas abiertas y cerradas]
+        H --> K[Validar preguntas]
+        I --> K
+        J --> K
+    end
+
+    subgraph Respuesta
+        K --> L[Publicar y distribuir cuestionario]
+        L --> M[Recopilar respuestas]
+        M --> N[Analizar respuestas]
+    end
+
+    N --> O[Generar informe y conclusiones]
+    O --> P[Fin]
+```
+
+### 4. Diagrama de Mostrar resultados
+
 ```mermaid
 sequenceDiagram
     participant Usuario
@@ -278,7 +288,9 @@ end
 Frontend->>Usuario: 2: Mostrar resultados
 
 ```
-### Diagrama de cerrar sesión
+
+### 5. Diagrama de cerrar sesión
+
 ```mermaid
 sequenceDiagram
     participant Usuario
@@ -315,7 +327,23 @@ sequenceDiagram
 
     Backend->>FrontEnd: ¿Qué rol tiene el usuario?
 ```
-### Diagrama Generación de Graficas
+
+### 6. Diagrama de Modo Nocturno
+
+```mermaid
+sequenceDiagram
+    participant Usuario
+    participant FrontEnd
+
+    Usuario->>FrontEnd: Hace clic en "Modo Nocturno"
+    FrontEnd->>Usuario: Cambia a tema oscuro
+    Usuario->>FrontEnd: Hace clic en "Modo Nocturno" nuevamente
+    FrontEnd->>Usuario: Restaura tema claro
+```
+
+### 7. Diagrama de Crear evento
+### 8. Diagrama de Ver gráfica
+
 ```mermaid
 sequenceDiagram
     participant Usuario
@@ -342,20 +370,7 @@ sequenceDiagram
     Frontend->>Usuario: 14: Mostrar gráfica y resultados
 ```
 
-### Diagrama Modo Nocturno
-
-```mermaid
-sequenceDiagram
-    participant Usuario
-    participant FrontEnd
-
-    Usuario->>FrontEnd: Hace clic en "Modo Nocturno"
-    FrontEnd->>Usuario: Cambia a tema oscuro
-    Usuario->>FrontEnd: Hace clic en "Modo Nocturno" nuevamente
-    FrontEnd->>Usuario: Restaura tema claro
-```
-
-
+### 9. Diagrama de Ver resultados
 
 # Implementación de ISO 27001 en el proyecto
 
@@ -419,6 +434,61 @@ Realizacion de pruebas para identificar incidentes y realizar mejoras continuas 
 # AOO
 
 ## Analisis de requerimientos:
+### Definición del sistema en general
+
+Sistema web que permite la administración de encuestas y los 4 tipos de dominancia cerebral de una persona mostrando sus resultados de manera grafíca y escrita, limitando el numero de personas con acceso a la encuesta a través de fecha de cierre y limite de respuestas, para esto el sistema generara de manera automatica un link unico el cual dara acceso a la encuesta correspondiente.
+
+En relación al usuario, al momento del inicio de sesión este podra visualizar información correspondiente a cada tipo de dominancia cerebral y al finalizar la encuesta el sistema arrojara los resultados de su dominancia de manera grafíca y escrita. Cada usuario tendrá solo una oportunidad de responder la encuesta y que esta se registre en la base de datos de nuestro sistema web.
+
+### Requisitos y partes del sistema
+
+  
+#### 1. **Interfaces** 🫡
+
+- Inicio de sesión
+- Registrar
+- Recuperación de credenciales
+- Administrador: 
+    - Ventana Principal
+    - Visualización de eventos
+    - Creación de eventos
+    - Sección de respuestas
+    - Visualización de Grafícos
+- Usuario: 
+    - Ventana de bienvenida
+    - Sección de resultados
+    - Cuestionario
+    - Descripción de loss tipos de dominancia
+
+
+#### 2. **Validación y Autenticación**🔒
+- Autorización al sistema mediante un modulo para registro de usuarios.
+- Alertas por correos no validos,no existentes o por credenciales vacias.
+-  Protección contra SQL injection.
+-  Limite de una respuesta por usuario a un evento.
+-  Solo debe haber una opción seleccionada por respuesta
+-  La encuesta solo puede ser contestada mientras este disponible
+-  Creación de eventos en una fecha valida.
+-  Se debe iniciar sesión para acceder al sistema.
+
+#### 3. **Gestión de los datos**⚙️
+- Base de datos segura para el almacenamiento de información mediante encriptación de datos.
+
+#### 4. **Retroalimentación al usuario**🚨
+- Envio de alertas o notificaciones cada vez que sea necesario.
+
+#### 6. **Funciones de la seccion de usuario** 💻
+- Función para contestar un formulario
+- Función para cerrar sesión
+- Seccion de informacion de los 4 tipos de dominancia cerebral
+- Funcion para conocer sus resultados
+
+#### 8. **Funciones de la seccion administrador**📈
+- Función para crear,editar,desactivar un evento
+- Función para ver las respuestas de un evento
+- Funcion para ver las respuestas globales
+
+
 ## Diseño: 
 **Arquitectura**
 Al aplicar la arquitectura cliente-servidor a nuestro proyecto, podemos estructurarlo de la siguiente manera:
